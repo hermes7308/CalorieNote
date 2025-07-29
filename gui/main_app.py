@@ -43,5 +43,5 @@ class MainWindow(QMainWindow):
         self.history_tab = HistoryTab()
         self.tabs.addTab(self.upload_tab, "Upload")
         self.tabs.addTab(self.analysis_tab, "Analysis")
-        self.tabs.addTab(self.history_tab, "History")
+        self.tabs.addTab(self.history_tab, "GPT History")
         main_layout.addWidget(self.tabs)
