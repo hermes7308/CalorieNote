@@ -23,8 +23,8 @@
 1. 음식 이미지 업로드
 2. GPT 로 칼로리 계산
 3. 날짜 입력
-3. 저장 버튼 클릭 → DB 저장
-4. GPT 히스토리(리스트) 및 칼로리 그래프 출력
+4. 저장 버튼 클릭 → DB 저장
+5. GPT 히스토리(리스트) 및 칼로리 그래프 출력
 
 ## 🔧 시스템 구성도 (Architecture)
 
@@ -35,7 +35,7 @@
    ↓                ↘
 [ 이미지 ]        [ 검색 질의 ]
    ↓                  ↓
-[ GPT API 호출 ]        
+[ GPT API 호출 ]
    ↓              ↘   ↓
 [ 날짜 + 칼로리 ]    [ SQLite DB ]
    ↓
@@ -71,6 +71,28 @@ project/
 │───README.md
 └───requirements.txt
 ```
+
+## 📝 사용 방법
+
+1. `.env` 파일에 본인의 OPENAI_API_KEY를 입력하세요.
+   ```
+   OPENAI_API_KEY={YOUR_OPENAI_API_KEY}
+   DB_PATH=app.db
+   ```
+2. 아래 명령어로 필요한 패키지를 설치하세요.
+   ```
+   pip install -r requirements.txt
+   ```
+3. 아래 명령어로 프로그램을 실행하세요.
+   ```
+   # Python 3.11
+   python main.py
+   ```
+
+> ⚠️ 참고:
+>
+> - `.env` 파일이 없으면 OpenAI API를 사용할 수 없습니다.
+> - Windows PowerShell/명령 프롬프트에서는 각 명령어를 한 줄씩 개별적으로 실행하세요.
 
 ## 📷 예시 시나리오
 
